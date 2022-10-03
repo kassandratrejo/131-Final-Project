@@ -1,0 +1,53 @@
+---
+title: "Final Project Memo"
+output: html_document
+date: "2022-10-03"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Overview of the dataset
+
+The Formula 1 World Championship(1950-2022) data set includes inforation on the Formula 1 race circuits, constructor results, constructor standings, driver standings, drivers, lap times, pit stops, qualifying, races, results, seasons, spring results, and status. 
+
+The dataset is located on kaggle 
+https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020?select=lap_times.csv
+
+There are 14 different files with varying observation numbers.
+Sprint Results has 100 with 16 columns
+Seasons has 73 with 2 columns
+Results has 25665 with 18 columns 
+Races has 1096 with 18 columns
+Qualifying has 9452 with 9 columns 
+Pit Stops 1086 with 7 columns
+Lap Times has 65535 with 6 columns
+Drivers has 855 with 9 columns 
+Drivers Standings has 71563 with 7 columns 
+Constructors has 214 with 5 columns 
+Constructors Standing has 28272 with 7 columns 
+Constructor results has 16579 with 5 columns
+Circuits has 79 with 9 columns 
+
+I will be working with both categorical and numerical data. Mostly numerical as many of the variables are in seconds or milliseconds. There is also use of whole numbers from grid positions and driver number. The categorical data is in the form of track race name, team name, and driver name. 
+
+There is some missing data from the early years. I have an idea to look through and create separate data frames without the missing data but I am still not certain of how to account for the missing data yet. 
+
+Overview of research question 
+
+I am interested in predicting the effect that pit stop times have on results as well as the effect that qualifying has on results. I also want to look at drivers and their performance throughout the years. More specifically I want to examine the drivers that have switched teams and determine in which team they had a better performance in. I want to examine the correlation among lap times and qualifying on constructors standings.
+
+I believe these questions can best be answered with a regression approach because this is supervised data where I already know which team has won each championship and I have the inputs. 
+
+From looking at the data I think the predictors that will be especially useful will be lap times, qualifying,and results. These predictors contain the main parts of a race. It is important to see each lap time to determine if the driver was going faster during certain parts of the track, if he went slower during the middle of the race because of an issue with the car or because of another factor. 
+
+The goal of my model is a combination of descriptive and predictive. I am interested in exploring the data and choosing a model that will fit the data the best. Also I want to determine which combination of features yield the best results.
+
+Proposed project timeline 
+
+Now that I have found my data set I want to start working on cleaning and tidying it. From there I need to explore the data and determine any trends or correlations within the data. From there will need to have a train and test data set to see which of the models works the best to predict our response variable. I plan to dedicate a part of the project to each week to stay consistently working on the project and attend office hours in case I encounter some errors. 
+
+Questions or concerns 
+
+I am not sure if it will be an issue that each file has varying observations and I am worried that some of the files are not relevant to my main idea. Also at this time I don't have one main or specific response variable, I think that I want to predict how good a team will do based upon the predictor variables or how each team handles a different driver but I hope to decide on a main response variable soon. 
